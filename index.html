@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en-US" style="--inner1Vh: 9px; --sbw: 0px;">
+
+<head>
+    <script type="text/javascript" src="js/bundle-playback.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/wombat.js" charset="utf-8"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = { autoplay: "on", unmuteOverlay: "hidden" };
+    </script>
+    <script type="text/javascript" src="js/ruffle.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/banner-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/iconochive.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMORMU</title>
+    <meta name="description" content="Meet $SMORMU, the newest star in the meme token galaxy!">
+    <link rel="icon" href="images/smaller_smormu.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="images/small_smormu.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/smormu.png" sizes="180x180">
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="SMORMU">
+    <meta property="og:description" content="Meet $SMORMU, the newest star in the meme token galaxy!">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <noscript>
+        <style>
+            @keyframes pulse {}
+
+            .animated {
+                animation-play-state: running !important;
+            }
+        </style>
+    </noscript>
+    <script nonce="">
+        !(function () {
+            "use strict";
+            function t(t, n) {
+                let e;
+                return (...o) => {
+                    clearTimeout(e),
+                        (e = setTimeout(() => {
+                            t(...o);
+                        }, n));
+                };
+            }
+            class n {
+                constructor() {
+                    (this.callbacks = []), window.addEventListener("DOMContentLoaded", () => this.onDOMContentLoaded());
+                }
+                onDOMContentLoaded() {
+                    this.callbacks.sort((t, n) => t.priority - n.priority).forEach(({ callback: t }) => t());
+                }
+                runOnLoad(t) {
+                    "loading" === document.readyState ? this.callbacks.push(t) : t.callback();
+                }
+            }
+            function e(t, e = Number.MAX_VALUE) {
+                var o;
+                (window.canva_scriptExecutor = null !== (o = window.canva_scriptExecutor) && void 0 !== o ? o : new n()).runOnLoad({ callback: t, priority: e });
+            }
+            class o {
+                constructor(t) {
+                    (this.items = []), (this.previousWidth = document.documentElement.clientWidth), (this.previousHeight = window.innerHeight);
+                    const n = t(() => this.onWindowResize(), 100);
+                    window.addEventListener("resize", n);
+                }
+                onWindowResize() {
+                    const t = document.documentElement.clientWidth,
+                        n = window.innerHeight,
+                        e = this.previousWidth !== t,
+                        o = this.previousHeight !== n;
+                    this.items.forEach((t) => {
+                        const n = () => {
+                            t.callback(), (t.executed = !0);
+                        };
+                        (!t.executed || (e && t.options.runOnWidthChange) || (o && t.options.runOnHeightChange)) && n();
+                    }),
+                        (this.previousWidth = t),
+                        (this.previousHeight = n);
+                }
+                runOnResize(t, n) {
+                    this.items.push({ callback: t, options: n, executed: n.runOnLoad }), this.items.sort((t, n) => t.options.priority - n.options.priority), n.runOnLoad && e(t, n.priority);
+                }
+            }
+            function i(n, e, i = t) {
+                var r;
+                (window.canva_debounceResize = null !== (r = window.canva_debounceResize) && void 0 !== r ? r : new o(i)).runOnResize(n, { runOnLoad: !1, runOnWidthChange: !0, runOnHeightChange: !1, priority: Number.MAX_VALUE, ...e });
+            }
+            const r = "--minfs",
+                c = "--rzf",
+                a = "--rfso",
+                s = "--bfso";
+            function u(t, n, e = 0.001) {
+                return Math.abs(t - n) < e;
+            }
+            function d(t, n) {
+                return window.getComputedStyle(t).getPropertyValue(n);
+            }
+            function l(t, n, e) {
+                t.style.setProperty(n, e);
+            }
+            function m(t, n) {
+                const e = document.createElement("div");
+                e.style.setProperty(t, n), document.body.append(e);
+                const o = d(e, t);
+                return e.remove(), o;
+            }
+            function f() {
+                const t = (function () {
+                    const t = parseFloat(m("font-size", "0.1px"));
+                    return t > 1 ? t : 0;
+                })(),
+                    n = (function (t) {
+                        const n = 2 * Math.max(t, 1);
+                        return n / parseFloat(m("font-size", `${n}px`));
+                    })(t);
+                if (
+                    ((function (t) {
+                        if (0 === t) return;
+                        l(document.documentElement, r, `${t}px`),
+                            i(
+                                () => {
+                                    const n = 100 * t,
+                                        { clientWidth: e } = document.documentElement;
+                                    l(document.documentElement, c, n > e ? (e / n).toPrecision(4) : null);
+                                },
+                                { runOnLoad: !0 }
+                            );
+                    })(t * Math.max(1, n)),
+                        u(n, 1))
+                )
+                    return;
+                const e = u(parseFloat(d(document.documentElement, "font-size")), parseFloat(m("grid-template-columns", "1rem")));
+                l(document.documentElement, e ? a : s, n.toPrecision(4));
+            }
+            function h() {
+                document.querySelectorAll("img, image, video, svg").forEach((t) => t.addEventListener("contextmenu", (t) => t.preventDefault()));
+            }
+            const p = (t) => {
+                const n = { type: "CLICKED_LINK", link: t.currentTarget.getAttribute("href") };
+                navigator.sendBeacon("_api/analytics/events", JSON.stringify(n));
+            };
+            function g() {
+                [...document.querySelectorAll("a[href][data-interstitial-link]")].forEach((t) => {
+                    t.addEventListener("click", p);
+                });
+            }
+            const v = "--sbw",
+                w = "--inner1Vh";
+            function y(t, n, e) {
+                t.style.setProperty(n, e);
+            }
+            function E() {
+                y(document.documentElement, w, window.innerHeight / 100 + "px"),
+                    (function () {
+                        const t = window.innerWidth - document.documentElement.clientWidth;
+                        y(document.documentElement, v, t >= 0 ? `${t}px` : null);
+                    })();
+            }
+            var b;
+            const O = "undefined" != typeof window ? (null === (b = window.navigator) || void 0 === b ? void 0 : b.userAgent) : void 0;
+            const L = !(!O || ((A = O), !A.match(/AppleWebKit\//) || A.match(/Chrome\//) || A.match(/Chromium\//)));
+            var A;
+            function x() {
+                document.querySelectorAll("svg").forEach((t) => (t.style.background = "url('data:image/png;base64,')"));
+            }
+            let C;
+            function W() {
+                C || (C = Array.from(document.querySelectorAll("foreignObject")).filter((t) => 0 === t.getBoundingClientRect().width));
+                const t = (function () {
+                    const t = document.createElement("div");
+                    (t.style.fontSize = "100vw"), document.body.append(t);
+                    const n = parseFloat(window.getComputedStyle(t).fontSize);
+                    return t.remove(), n / window.innerWidth;
+                })();
+                Array.from(C).forEach((n) =>
+                    (function (t) {
+                        return new Promise((n, e) => {
+                            const o = t.querySelector("img");
+                            o && !o.complete ? (o.addEventListener("load", () => n()), o.addEventListener("error", () => e())) : n();
+                        });
+                    })(n).finally(() =>
+                        (function (t, n) {
+                            const e = Array.from(t.children);
+                            e.forEach((t, n) => {
+                                if (t.hasAttribute("data-foreign-object-container")) (t.style.transformOrigin = ""), (t.style.transform = "");
+                                else {
+                                    const o = document.createElement("div");
+                                    o.setAttribute("data-foreign-object-container", ""), t.insertAdjacentElement("beforebegin", o), t.remove(), o.append(t), (e[n] = o);
+                                }
+                            });
+                            const o = t.getScreenCTM();
+                            if (!o) return;
+                            const { a: i, b: r, c: c, d: a } = o.scale(n);
+                            e.forEach((t) => {
+                                if (!t.hasAttribute("data-foreign-object-container")) return;
+                                const { style: n } = t;
+                                (n.transformOrigin = "0px 0px"), (n.transform = `matrix(${i}, ${r}, ${c}, ${a}, 0, 0)`);
+                            });
+                        })(n, t)
+                    )
+                );
+            }
+            [
+                function () {
+                    e(f);
+                },
+                function () {
+                    i(E, { runOnLoad: !0, runOnHeightChange: !0, priority: 1 });
+                },
+                function () {
+                    L && i(W, { runOnLoad: !0 });
+                },
+                function () {
+                    L && e(x);
+                },
+                function () {
+                    e(h);
+                },
+                function () {
+                    e(g);
+                },
+            ].forEach((t) => t());
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- BEGIN WAYBACK TOOLBAR INSERT -->
+    <script>
+        __wm.rw(0);
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+        __wm.bt(
+            725,
+            27,
+            25,
+            2,
+            "web",
+            "https://smormu.top/",
+            "20240611040303",
+            1996,
+            "https://web-static.archive.org/_static/",
+            ["https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt", "https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ"],
+            false
+        );
+        __wm.rw(1);
+        //]]>
+    </script>
+    <!-- END WAYBACK TOOLBAR INSERT -->
+    <div id="root">
+        <a id="page-1" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="ZEsrPUKbMbGAvpTf"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0;">
+            <div id="Sv9KaXgikdg6c96n"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="owPXPbvBI2DSh0wO" style="z-index: 0;">
+                    <div id="zbRvMRW8G1aVvjpj"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="hNALwKBlMN6mOGu0" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="EP6EAlhq5pxLBZtA"
+                                style="background-color: #feff46; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="d468k8Zuzs4TYaly" style="z-index: 2;">
+                    <div id="drDFZbRfpEWgGeM7"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="R39shau0SCD4gNKU" style="width: 100%; height: 100%; opacity: 0.31;">
+                            <div id="CxtFp1hRf7um0KuV"
+                                style="transform: scale(1, -1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                <div id="Y5jDibqIrnKKRfrk" style="
+                                            width: calc(100% * max(1, var(--scale-fill, 1)));
+                                            height: calc(100% / min(1, var(--scale-fill, 1)));
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            opacity: 1;
+                                            animation: pulse 1.5s ease-in-out infinite;
+                                        ">
+                                    <img src="images/19732276ecd1250b17c799b208265e54.svg" alt="yellow shape"
+                                        loading="lazy"
+                                        style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="POKk6PcYpIx21OAH" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="j94yE3XXYF87588G">
+                    <div id="CFJyjOQNcUGzMAsf" style="display: grid; position: relative; grid-area: 2 / 3 / 3 / 6;">
+                        <div id="ngCIrPDn0OznF1JU" style="z-index: 3;">
+                            <div id="A688grpADlqP0RLV" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-RIGHT-b3df1fa3-a1de-49e8-a9ae-fe3dbb6dee34 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="YaX8Ambe6e5Q3Iih"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="x3a9t9BXLzCparVK"
+                                                style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.84776791em; text-align: center; -webkit-text-stroke: 0.03em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                                <span id="Oa8bBohmCw5C6TI0" style="color: #38b6ff;">SMORMU</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hbn1OutVSLzbGcta" style="display: grid; position: relative; grid-area: 3 / 3 / 5 / 5;">
+                            <div id="Wyi7mnRYOratOWNG" style="z-index: 4;">
+                                <div id="yDEkAlygJ77m6QuR" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: rise-RIGHT-788922fe-95bd-45d9-819a-b8f0d446b9fe 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                            <div id="hvq0YWwUFRlm6pyO"
+                                                style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                                <p id="TrX4fMjqLF7aofGm"
+                                                    style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.84776791em; text-align: center;">
+                                                    <span id="oS04rdCuja62U6h9" style="color: #38b6ff;">SMORMU</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="qWk4aQlcTfFQwdwM" style="z-index: 5;">
+                                <div id="b6drt7cIRGt2kXx8"
+                                    style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                    <div id="vp07hN5FET8xds3I"
+                                        style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                        <p id="TPUrmOgVaqgyH5ES"
+                                            style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.38281142em; text-align: center;">
+                                            <span id="LjY4x6EUB3ZeK1kD" style="color: #000000;">SHRIMP KING</span><br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="V6IyLpgBsJek8CIG" style="z-index: 1;">
+                    <div id="hC7rUbhUkhHDzVhH" style="padding-top: 56.30630631%; transform: rotate(0deg);">
+                        <div id="PKGWvhAKHa1gUpsc"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="RyL7UsbPvv7DxNGy" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="kK51fcsXZSyrKC82"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="x66DRXiwY3tYF4e2" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/smiley-smormu.png" loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="FA5WSCxpKZCPe0ZJ" style="z-index: 6;">
+                    <div id="HWabnOjqkk4qAmKM" style="box-sizing: border-box; width: 100%; height: 100%;">
+                        <div class="animation_container" style="width: 100%; height: 100%;">
+                            <div class="animated"
+                                style="width: 100%; height: 100%; animation: rise-LEFT-c75c2d7d-6c47-4b57-aed5-5d60e056215c 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                <div id="dCvV9VEbnSJLKQuJ"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="e9KegPcFNEw4VNov"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39525195em; text-align: center;">
+                                        <span id="y6dKLoAsPndYP5wb" style="color: #000000;">
+                                            Meet $SMORMU, the newest star in the meme token galaxy! Smormu is a
+                                            character from Smiling Friends. $SMORMU became a legendary meme on Reddit
+                                            and X.
+                                        </span>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-2" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="umJ6xZ35NxZvXGRV"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="lXh92ElMHc99QgIM"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="Pj7kqueJSKFhzCRW" style="z-index: 0;">
+                    <div id="XuSGIOLcb5BJUbox"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="qqJFnI1nWZx0AKRI" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="gukMYz8rhwbABVTc"
+                                style="background-color: #38b6ff; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dg3x46W1t1v2Wn9f" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="wgQvYBLj2VVfb7J1" style="z-index: 1;">
+                    <div id="rX6dw3OwsxhkXPwh" style="padding-top: 20.90032154%; transform: rotate(0deg);">
+                        <div id="qiuNgKXE4MAKcIjd"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="ZNowinvTFnuoQN6z" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="Xgg5tVjmU6Uhvmg9"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="lMaUWBTiE6sYfxM6" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <a href="#" target="_blank">
+                                            <img src="images/ton-left.png" loading="lazy"
+                                                srcset="images/ton-left.png 374w, images/ton-left.png 560w"
+                                                sizes="(max-width: 375px) 23.46173024vw, (min-width: 375.05px) and (max-width: 480px) 23.46173024vw, (min-width: 480.05px) and (max-width: 768px) 23.46173024vw, (min-width: 768.05px) and (max-width: 1024px) 23.46173024vw, (min-width: 1024.05px) 23.46173024vw"
+                                                style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gHtvv0ZAW0ohrToG" style="z-index: 2;">
+                    <div id="xVxkMMf0US6VnDeV" style="padding-top: 31.07520199%; transform: rotate(0deg);">
+                        <div id="qRhpeKFEUEvVLZ0G"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="Kzt0S4BnDxuW34QN" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="DyHDSObQQSWsgV1u"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="qbvkv3ItGkLVfHYw" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <a href="#" target="_blank">
+                                            <img src="images/ton-left.png" loading="lazy"
+                                                srcset="images/ton-left.png 322w, images/ton-left.png 483w"
+                                                sizes="(max-width: 375px) 16.85661318vw, (min-width: 375.05px) and (max-width: 480px) 16.85661318vw, (min-width: 480.05px) and (max-width: 768px) 16.85661318vw, (min-width: 768.05px) and (max-width: 1024px) 16.85661318vw, (min-width: 1024.05px) 16.85661318vw"
+                                                style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Mgei0wzjqceEA8X3" style="z-index: 3;">
+                    <div id="mvRHyU283XwiTmkm" style="padding-top: 20.90032154%; transform: rotate(0deg);">
+                        <div id="IVmaBxFifZEjJUhh"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="APythWwaf20p1iTm" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="wRzUhsIXTTzl6RXG"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="bXwV3uCUWRMDoNja" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <a href="#" target="_blank"></a>
+                                        <img src="images/ton-left.png" loading="lazy"
+                                            srcset="images/ton-left.png 374w, images/ton-left.png 560w"
+                                            sizes="(max-width: 375px) 23.46173024vw, (min-width: 375.05px) and (max-width: 480px) 23.46173024vw, (min-width: 480.05px) and (max-width: 768px) 23.46173024vw, (min-width: 768.05px) and (max-width: 1024px) 23.46173024vw, (min-width: 1024.05px) 23.46173024vw"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="exKOw2g1VvKbvFXi" style="z-index: 4;">
+                    <div id="yuhgfBIWq8wjI5Pu" style="padding-top: 31.07520199%; transform: rotate(0deg);">
+                        <div id="Vq3r4HXkVJIBrInx"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="EXiCIfH6Cd0Y77lQ" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="A9x52PKbKTLRsjzc"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="hqygV7sSLS1YEUaF" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <a href="#" target="_blank"></a>
+                                        <img src="images/ton-left.png" loading="lazy"
+                                            srcset="images/ton-left.png 322w, images/ton-left.png 483w"
+                                            sizes="(max-width: 375px) 16.85661318vw, (min-width: 375.05px) and (max-width: 480px) 16.85661318vw, (min-width: 480.05px) and (max-width: 768px) 16.85661318vw, (min-width: 768.05px) and (max-width: 1024px) 16.85661318vw, (min-width: 1024.05px) 16.85661318vw"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-3" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="MD8IlR2A1R6HEFL2"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="yP63O2xtznwYgcXS"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="E26msV1PlFtEyDsf" style="z-index: 0;">
+                    <div id="Bo3G1gnOGHQ4Bh4t"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="G7v4cd1CJyZLmnyx" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="TeoBCvWc96X4DXVp"
+                                style="background-color: #feff46; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="RCLttvig4UCFslrb" style="z-index: 1;">
+                    <div id="Af4me9x6uvWbKfIQ"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="Iop1eYecBfE6WENW" style="width: 100%; height: 100%; opacity: 0.31;">
+                            <div id="Lc4CZQGcq0BWI2mB"
+                                style="transform: scale(-1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                <div id="zykXNZ6KqPeLoLTi" style="
+                                            width: calc(100% * max(1, var(--scale-fill, 1)));
+                                            height: calc(100% / min(1, var(--scale-fill, 1)));
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            opacity: 1;
+                                            animation: pulse 1.5s ease-in-out infinite;
+                                        ">
+                                    <img src="images/19732276ecd1250b17c799b208265e54.svg" alt="yellow shape"
+                                        loading="lazy"
+                                        style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pUyd6TFDbyWzLMcw" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="TJEpmuqoB6klTGuv" style="z-index: 2;">
+                    <div id="Bzyab0gUDYioMXQh" style="padding-top: 74.74048443%; transform: rotate(0deg);">
+                        <div id="gdNXg9bit0WnaN7S"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="j1h9u8Eo9DGMAs6b" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="g2B53KKtasLWwkMT"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="EsSJZdRnjc6FstyY" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/loving-smormu.png" loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SM07NHCW0r7CT1K2">
+                    <div id="hUyzl1MXnFn3z6VR" style="display: grid; position: relative; grid-area: 3 / 5 / 4 / 6;">
+                        <div id="ZxR7DXvLdsfu0e9P" style="z-index: 3;">
+                            <div id="qTZeQSLm3Oyy3W6Q" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-RIGHT-021456f9-a8e0-4dba-a777-3e9b855e79fc 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="h5k3OTNWsWtfGWyX"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="Ddd9mbYohhTMVkak"
+                                                style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.83578887em; text-align: center; -webkit-text-stroke: 0.03em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                                <span id="yk038oV0m5CygpKk" style="color: #38b6ff;">ABOUT ME?</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="D6CSA7lK1APKaAnI" style="z-index: 4;">
+                            <div id="lNbe2RaeCMRtLBGJ" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-RIGHT-4a8650dd-9dd6-4fd5-8af3-f051e5870b39 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="H5tjBKTGtbUt0UYu"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="yPVkKUtycmZIB5fQ"
+                                                style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.83578887em; text-align: center;">
+                                                <span id="OZwpTOgDHW0j2fjg" style="color: #38b6ff;">ABOUT ME?</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="UbeDyIstPuOWmzgw" style="z-index: 5;">
+                    <div id="uDMeL0HJsr4nhsj6" style="box-sizing: border-box; width: 100%; height: 100%;">
+                        <div class="animation_container" style="width: 100%; height: 100%;">
+                            <div class="animated"
+                                style="width: 100%; height: 100%; animation: rise-RIGHT-9f693e95-8806-4dc0-9e3f-e231f107f8d4 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                <div id="YvzyXl5PB04WsmZP"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="CJm7Ub4J9Y1ZUXz0"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39525195em; text-align: center;">
+                                        <span id="qP1cNqbpCBjBps5Q" style="color: #000000;">
+                                            Who hasn't met $SMORMU yet, it's time to get acquainted. It's a legendary
+                                            shrimp that has gained popularity on Twitter, YouTube, and Reddit. It's time
+                                            to pay homage to this meme. Meet SMORMU
+                                            on TON.
+                                        </span>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-4" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="AvHzuwJqzqGqwFOC"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="KDJtj9zqg9tu29Fc"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="M7kmbEzM6LXd6llZ" style="z-index: 0;">
+                    <div id="qeamTl8HzAklRvPN"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="Avnquuia8uLIFzBy" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="r33nChr8brLQ3PPC"
+                                style="background-color: #38b6ff; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="wKQxvCoQwRCEtjSY" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="EwNgg4Wo9iiKV75f" style="z-index: 29;">
+                    <div id="x5dQM35xcXzztVUa" style="padding-top: 138.64818024%; transform: rotate(52.90979452deg);">
+                        <div id="sG0h1TF58FClgMw4"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="hlJT8Yd9T9SacWF4" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="eapUDrmAniyQNq0a"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="gTDvUycKC4GycKhe" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="UK4vqsBM054ewFGZ" style="z-index: 27;">
+                    <div id="utry2Awxk5Dg0ELl" style="padding-top: 138.64818024%; transform: rotate(52.90979452deg);">
+                        <div id="V5iHQK3iv21VLUU4"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="McH1Xd6TeYvI3aE2" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="Wb0ocW7741EGzHyS"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="cJFQSQux2hVfXY2p" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="p7kd6BcXj8EiPfiw">
+                    <div id="eJCnjs8MkDwnMRqX" style="display: grid; position: relative; grid-area: 5 / 4 / 9 / 15;">
+                        <div id="USqG2oSigR0PYNUy" style="z-index: 12;">
+                            <div id="Y0HWr75suT3K2O5E" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-5e33f9f7-4616-44f8-a86d-0cb9b615dffe 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="YMO1VjWgmTvlQDO3"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="B5ewOg95166rrJ0r"
+                                                style="color: #feff46; font-family: YADZ-XEawXk-0; line-height: 0.84124521em; text-align: center; -webkit-text-stroke: 0.03em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                                <span id="xhOrAmOiCsxVDOwO" style="color: #feff46;">SMORMUNOMIC</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="KCtniKa8xG32QrTo" style="z-index: 13;">
+                            <div id="j8cOC4Cc2f4ggcaw" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-7c206600-bfea-4167-8444-63c50df0c40a 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="NTE66Bkx5LlFSevc"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="Jjk1qB3jlysqsdjx"
+                                                style="color: #feff46; font-family: YADZ-XEawXk-0; line-height: 0.84124521em; text-align: center;">
+                                                <span id="h5KQn0VQdnyz0V78" style="color: #feff46;">SMORMUNOMIC</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="iFrjRyrCXuqAXAXx" style="z-index: 14;">
+                    <div id="dSb5nWqtq03B5tiA"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="syeOo2YM0K9p4VDa"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="KMKj5tuE8m1vCIva"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.37329729em;"><span
+                                    id="npYkInbR00rHWECX" style="color: #000000;">Contract Address:</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pwWaKrrpnwamFAli" style="z-index: 31;">
+                    <div id="yd9uK7Eehq7NPPW3" style="padding-top: 138.64818024%; transform: rotate(20.14235137deg);">
+                        <div id="p9WmrZ3AzmXFiIIn"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="Rwu6iwIEPk8WLuYa" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="HAcJRX3Acy4HAgpS"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="I3T2paNpdezIWIAL" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ANyXuq0uVu6hjcXL">
+                    <div id="jyspyZNDH5HFpOR1" style="display: grid; position: relative; grid-area: 15 / 6 / 16 / 20;">
+                        <div id="XYAsJWIKp9yoS6OS" style="z-index: 24;">
+                            <div id="GVDSBVZxjUmTERk4"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="vZwlrP7wGrUhS9YN"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="BQuSO0fXnlmRWYbn"
+                                        style="color: #feff46; font-family: YAFdJt8dAY0-1; line-height: 1.3732951em; -webkit-text-stroke: 0.075em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                        <span id="Fdn54k7ZeSegsUfz"
+                                            style="color: #feff46; font-weight: 700;">Soon</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="D1zMppapQQiH3jLA" style="z-index: 25;">
+                            <div id="ORoA3sTB7LZsuDvT"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="TNJjI3SRb0vX2h4s"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="KzV8p8Sbhz4TeNVw"
+                                        style="color: #feff46; font-family: YAFdJt8dAY0-1; line-height: 1.3732951em;">
+                                        <span id="wPyOkd4v2A0Xj7LH"
+                                            style="color: #feff46; font-weight: 700;">Soon</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="NMi3KmihisnOp4o7" style="z-index: 10;">
+                    <div id="mLxNWlVNC2AMqgO2" style="padding-top: 103.74507353%; transform: rotate(0deg);">
+                        <div id="GwkN54Uz1DislMCS"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="BBy0KkZNXzYGB0hw" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="MBi3DeUiznyybkUX"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="NZSFSJzXDv4j2NbM" style="
+                                                width: calc(318.08218445% * max(1, var(--scale-fill, 1)));
+                                                height: calc(172.63502062% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/dancing-smormu.png" loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50.33941378% 50.86365523%; transform: translate(-50.33941378%, -50.86365523%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="P7hcGfWdjbOeTRfK">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div id="ciLTInj3hnqdQ2nm"
+                                        style="display: grid; position: relative; grid-area: 32 / 7 / 38 / 12;">
+                                        <div id="qYwRPgmOAyI6UH1N" style="z-index: 1;">
+                                            <div id="YS93YZ28oKJ2JLmJ"
+                                                style="padding-top: 37.70313992%; transform: rotate(0deg);">
+                                                <div id="GYyl6KPAupqW5nrm"
+                                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                                    <svg id="UnI86AfnzjT19456" viewBox="0 0 29.2546 11.0299"
+                                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                                        <g id="yocD9UBQLjmuSzU5" style="transform: scale(1, 1);">
+                                                            <path id="W4Ylg9OGRDOqXgUd"
+                                                                d="M1.97530738,0 L27.27931222,0 C27.80319631,0 28.30562347,0.20811214 28.67606546,0.57855414 29.04650746,0.94899613 29.2546196,1.45142329 29.2546196,1.97530738 L29.2546196,9.05460271 C29.2546196,9.5784868 29.04650746,10.08091396 28.67606546,10.45135595 28.30562347,10.82179794 27.80319631,11.02991009 27.27931222,11.02991009 L1.97530738,11.02991009 C0.88437524,11.02991009 0,10.14553485 0,9.05460271 L0,1.97530738 C0,1.45142329 0.20811214,0.94899613 0.57855414,0.57855414 0.94899613,0.20811214 1.45142329,0 1.97530738,0 Z"
+                                                                style="fill: #feff46; opacity: 1;"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BJVonBBUrRo34DcY" style="z-index: 15;">
+                                            <div id="n6nUzw4UszibmaTl"
+                                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                                <div id="MRBPmhxwSmWygG5W"
+                                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                                    <p id="CasBj7JRDsgJpABz"
+                                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                                        <span id="ciZUmAeWfWPXD6rA" style="color: #000000;"><a href="#"
+                                                                target="_blank">CHART</a></span><br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="ciLTInj3hnqdQ2nm"
+                                        style="display: grid; position: relative; grid-area: 32 / 7 / 38 / 12;margin-top: .3em;">
+                                        <div id="qYwRPgmOAyI6UH1N" style="z-index: 1;">
+                                            <div id="YS93YZ28oKJ2JLmJ"
+                                                style="padding-top: 37.70313992%; transform: rotate(0deg);">
+                                                <div id="GYyl6KPAupqW5nrmxx"
+                                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                                    <svg id="UnI86AfnzjT19456" viewBox="0 0 29.2546 11.0299"
+                                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                                        <g id="yocD9UBQLjmuSzU5xx" style="transform: scale(1, 1);">
+                                                            <path id="W4Ylg9OGRDOqXgUd"
+                                                                d="M1.97530738,0 L27.27931222,0 C27.80319631,0 28.30562347,0.20811214 28.67606546,0.57855414 29.04650746,0.94899613 29.2546196,1.45142329 29.2546196,1.97530738 L29.2546196,9.05460271 C29.2546196,9.5784868 29.04650746,10.08091396 28.67606546,10.45135595 28.30562347,10.82179794 27.80319631,11.02991009 27.27931222,11.02991009 L1.97530738,11.02991009 C0.88437524,11.02991009 0,10.14553485 0,9.05460271 L0,1.97530738 C0,1.45142329 0.20811214,0.94899613 0.57855414,0.57855414 0.94899613,0.20811214 1.45142329,0 1.97530738,0 Z"
+                                                                style="fill: #6DEB55; opacity: 1;"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="BJVonBBUrRo34DcY" style="z-index: 15;">
+                                            <div id="n6nUzw4UszibmaTl"
+                                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                                <div id="MRBPmhxwSmWygG5Wx"
+                                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                                    <p id="CasBj7JRDsgJpABz"
+                                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                                        <span id="ciZUmAeWfWPXD6rA" style="color: #000000;"><a
+                                                                href="https://dedust.io"
+                                                                target="_blank">BUY</a></span><br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+
+
+                <div id="JWmAOHIoqqbMxEe2" style="z-index: 30;">
+                    <div id="mWpIUUBiAxLKBWla" style="padding-top: 138.64818024%; transform: rotate(20.14235137deg);">
+                        <div id="m6uSDPElJZY3rsUJ"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="T59NVL4Dv1Oe93si" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="vjsX3lHUZVNMhLAr"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="HCzXdtyBKl916Aj9" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="BSVEbCc4hmc476i0" style="z-index: 26;">
+                    <div id="vttlLcBKrQkLbOVc" style="padding-top: 138.64818024%; transform: rotate(-25.31459261deg);">
+                        <div id="gK1UIoeg8VvfxSyZ"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="WJYOeTnqgzi4uH9E" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="Rtb3DjU5NBNTEFRz"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="WFgWVtGR5l2WgulD" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="qIjUYea8PLpdeKlf" style="z-index: 11;">
+                    <div id="SbYaVV7LZUKtY13s" style="padding-top: 138.64818024%; transform: rotate(-25.31459261deg);">
+                        <div id="VzMN8uQEN6mgoJrY"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="FcHBkWWY2WVjqZDp" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="XzxtpuxZf6dJ9Q90"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="CNfhBERox2RHwLRM" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="zNU8cWdGJEfCxHD3">
+                    <div id="tHahfhPexCoKbeuq" style="display: grid; position: relative; grid-area: 10 / 26 / 17 / 29;">
+                        <div id="Nxz8710fsUNWROet" style="z-index: 2;">
+                            <div id="n1ZoPMG7Nu7IDtV4" style="padding-top: 100%; transform: rotate(0deg);">
+                                <div id="qI1IuttMqQD1Sa9f"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="DLkkkRKKX6VoJV0C" viewBox="0 0 64.0 64.0"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="h6nKuQL7SkpP5xh0" style="transform: scale(1, 1);">
+                                            <path id="vQ4CR9PDOshj9MN2"
+                                                d="M32,0 C14.32688808,0 0,14.32688808 0,32 C0,49.67311096 14.32688808,64 32,64 C49.67311096,64 64,49.67311096 64,32 C64,14.32688808 49.67311096,0 32,0 Z"
+                                                style="fill: #feff46; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hU4ALosJVNagLPKd" style="z-index: 6;">
+                            <div id="GLpuxUblP9Xvc5EV" style="padding-top: 138.88888889%;">
+                                <div id="YQLRLRH0M0TkfSnb"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-RIGHT-7b25f9c1-1527-4c39-89e5-d3abf2fd068a 500ms 100ms both paused;">
+                                            <div id="aJCiDGTFLtOnVe7W" style="width: 100%; height: 100%; opacity: 1;">
+                                                <div id="olhtasgEdpgzwNjW"
+                                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                    <div id="YeqvsM2gItvqzjXm" style="
+                                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                opacity: 1;
+                                                                animation: pulse 1.5s ease-in-out infinite;
+                                                            ">
+                                                        <img src="images/burned.svg" alt="Fire Outline Icon "
+                                                            loading="lazy"
+                                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cq4Wo5lwv9JjKElu">
+                    <div id="Bpnvin58jVxBW25n" style="display: grid; position: relative; grid-area: 11 / 40 / 18 / 42;">
+                        <div id="LGW4qClGob5N15Xf" style="z-index: 3;">
+                            <div id="A7MzxfbEful69S4J" style="padding-top: 100%; transform: rotate(0deg);">
+                                <div id="ALf8FaZsgaOvtbkz"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="YyiUErx3u4WZlHug" viewBox="0 0 64.0 64.0"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="n7ce2eGuWjnsiEPk" style="transform: scale(1, 1);">
+                                            <path id="fzu8gFEWDvgsPiRT"
+                                                d="M32,0 C14.32688808,0 0,14.32688808 0,32 C0,49.67311096 14.32688808,64 32,64 C49.67311096,64 64,49.67311096 64,32 C64,14.32688808 49.67311096,0 32,0 Z"
+                                                style="fill: #feff46; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jSJDk3folmWiF7vQ" style="z-index: 7;">
+                            <div id="B6VPOIimzHjiSuUX" style="padding-top: 106.24169987%;">
+                                <div id="u3Oq1FmP65K7cKCn"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-RIGHT-6657152e-3333-4338-b870-9305a43fed5c 500ms 100ms both paused;">
+                                            <div id="XvUdbVY9bgR5JCaT" style="width: 100%; height: 100%; opacity: 1;">
+                                                <div id="toRCnhCH21EK9Ocf"
+                                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                    <div id="ix7rwY3IlT4cwjsO" style="
+                                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                opacity: 1;
+                                                                animation: pulse 1.5s ease-in-out infinite;
+                                                            ">
+                                                        <img src="images/delivery.svg" alt="Supply Chain Icon"
+                                                            loading="lazy"
+                                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="zOQYX4BG3ob6Fcmp" style="z-index: 16;">
+                    <div id="enGleFgyNAImo0xO"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="T1HNz9opStsAZIRq"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="PTFoN3SzTntGSh9K"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                <span id="Nh38hvTNCJP879ua" style="color: #000000;">LIQUIDITY</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="SGnYziAF0Ce7Vyq9" style="z-index: 20;">
+                    <div id="ebmng4MQ9MsnZfBq"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="JjGt8hffP0RFSJE5"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="dkQBpij9zasDoyRH"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39485155em; text-align: center;">
+                                <span id="cGk8VZjknpeDCfYZ" style="color: #000000;">burned</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="xzTsJ51eyxSRKEfA" style="z-index: 17;">
+                    <div id="XEIAoRXmqlscmqL5"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="NwdzsKWQe9vXwELY"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="DCWywcV6zDfZXsE1"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                <span id="cct1M9mnEVcPfYGW" style="color: #000000;">SUPPLY</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="R9SB5IphsFeRbb8w" style="z-index: 21;">
+                    <div id="DS0Rir98rnGzBAEh"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="ha6fw2U3SVQOHFGU"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="S8sn7OXI4ACxZjb1"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39485155em; text-align: center;">
+                                <span id="zYqrrLl5Ze4eZket" style="color: #000000;">1 billion</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pDb9KkYPe43G2miU">
+                    <div id="wjkFa0FDbpeIzaUa" style="display: grid; position: relative; grid-area: 29 / 27 / 33 / 30;">
+                        <div id="GkRaugzjxPkpb7qe" style="z-index: 4;">
+                            <div id="qd2HHqrNA73rE9h9" style="padding-top: 100%; transform: rotate(0deg);">
+                                <div id="yqTmCPZOnXEfYTCL"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="FjBF8xLzP9tPNEwB" viewBox="0 0 64.0 64.0"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="ii0O85Flz20hbX5R" style="transform: scale(1, 1);">
+                                            <path id="Vc0e7499FBUe1aXg"
+                                                d="M32,0 C14.32688808,0 0,14.32688808 0,32 C0,49.67311096 14.32688808,64 32,64 C49.67311096,64 64,49.67311096 64,32 C64,14.32688808 49.67311096,0 32,0 Z"
+                                                style="fill: #feff46; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="IKVKxbYaAg166x6P" style="z-index: 8;">
+                            <div id="SJn47i2wDnWcvkVo" style="padding-top: 100.88272383%;">
+                                <div id="lKZttVGWO7glxR3g"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-RIGHT-592abfcf-d9c7-4cae-9999-f6ce587362da 500ms 100ms both paused;">
+                                            <div id="KdBHibywHhJAZB0I" style="width: 100%; height: 100%; opacity: 1;">
+                                                <div id="DxhRrwSKbJs9IZAs"
+                                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                    <div id="J5Hoz8QWNOEvrKUy" style="
+                                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                opacity: 1;
+                                                                animation: pulse 1.5s ease-in-out infinite;
+                                                            ">
+                                                        <img src="images/tax.svg" alt="tax form service vector icon"
+                                                            loading="lazy"
+                                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s11kmkRHgGlCTfok">
+                    <div id="m0Kx9hObnB6amj9b" style="display: grid; position: relative; grid-area: 30 / 41 / 34 / 43;">
+                        <div id="hV8HXdJXnPIIiRNU" style="z-index: 5;">
+                            <div id="gU8NTuOoZ4cKkow2" style="padding-top: 100%; transform: rotate(0deg);">
+                                <div id="Shq9bURthd7PBj0j"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="lykrCFBsZ4xWxFaM" viewBox="0 0 64.0 64.0"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="jZ1CDpLsKGCzSkpH" style="transform: scale(1, 1);">
+                                            <path id="L1RXPiNSY3jg9Swb"
+                                                d="M32,0 C14.32688808,0 0,14.32688808 0,32 C0,49.67311096 14.32688808,64 32,64 C49.67311096,64 64,49.67311096 64,32 C64,14.32688808 49.67311096,0 32,0 Z"
+                                                style="fill: #feff46; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="KCLONDYwkQMQDstR" style="z-index: 9;">
+                            <div id="AXeHHjbt7LMGxor2" style="padding-top: 83.25%;">
+                                <div id="b5r2j5ddbqIyIEgd"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-RIGHT-a146629f-0707-4168-a21f-cdf1bd063de0 500ms 100ms both paused;">
+                                            <div id="Atzr5xvS5roxP2qn" style="width: 100%; height: 100%; opacity: 1;">
+                                                <div id="bG00ODd8nNkbhGiK"
+                                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                    <div id="KzLAdPljxNQ0qXcQ" style="
+                                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                opacity: 1;
+                                                                animation: pulse 1.5s ease-in-out infinite;
+                                                            ">
+                                                        <img src="images/mint.svg" alt="Ownership Outline Icon"
+                                                            loading="lazy"
+                                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gfKnUYSbGyOOIqkR" style="z-index: 18;">
+                    <div id="NhkMI6m9li4fYX67"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="q0H9yCHOyY2UfQrp"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="a3CL2fIAAxOefiAe"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                <span id="DuOjwIQuhOLYYaht" style="color: #000000;">TAX</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="X7xKzlo7MOEyo7KX" style="z-index: 19;">
+                    <div id="Tfiuzc3N1MlqgqVV"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="bDC6IlBAgzSsWVFQ"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="jTqpXHl1C9uM8EaB"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em; text-align: center;">
+                                <span id="BAn1mjMvI464XmXH" style="color: #000000;">MINT</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="wAWq0sk4sWgTzdnC" style="z-index: 28;">
+                    <div id="bh4ekGMjovRVOK8m" style="padding-top: 138.64818024%; transform: rotate(52.90979452deg);">
+                        <div id="cSZXQTt5GWPz0BDy"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="boyBwpXSKp49aVbp" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="kqPCkmASngw1hL2d"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="Q0XAlbGbbDix27FD" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="PcpYUdk8LeeEXBGu" style="z-index: 22;">
+                    <div id="BS5aBiRQlcKNc4Ft"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="Vv4hLjhX1Gv3bdpk"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="aXdsDfGSLaH7TSaC"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39485155em; text-align: center;">
+                                <span id="FRETWFXYhKIN7dCJ" style="color: #000000;">0/0%</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="H96ufKrcw54X2prc" style="z-index: 23;">
+                    <div id="PX0dK6P7ytOJrYqE"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="IvPa0h0piIBzrvf6"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="iDdyUynSt6EVN2Ng"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39485155em; text-align: center;">
+                                <span id="OheMvKxipbT1vgsq" style="color: #000000;">revoked</span><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ePrTb72wJIyeQvVF" style="z-index: 32;">
+                    <div id="DphrTv9wNCMMFbbo" style="padding-top: 138.64818024%; transform: rotate(29.12848361deg);">
+                        <div id="TF3DgG03hYbJXZAl"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="IcsgKooyC6tq0xYx" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="oQDf7JfbvaQmfc9l"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="xTOJ28F3trHhcqbW" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-5" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="SdZ61cwCv5G5NEWi"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="C4Hhuq7Kodp4LDS8"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="eC1agp71c9AE66vZ" style="z-index: 0;">
+                    <div id="ymRYeHwPafBrNZhL"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="xrZCtecw2gR9v9kB" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="SUpx7x7CLzDv4bqI"
+                                style="background-color: #38b6ff; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="FBOreEhn1v9obljx" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="t9Vw22hlEBzE3LCM" style="z-index: 9;">
+                    <div id="Y81W1q80FSlED312" style="padding-top: 138.64818024%; transform: rotate(129.74082845deg);">
+                        <div id="LZvrqWmzxcnElESx"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="zUjcSlwD7yuAsN2t" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="CzKYDvnD4WiDe7QY"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="Ge6EcSwmW9HKg6VI" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="uqBQQkWuveG1cnvi" style="z-index: 6;">
+                    <div id="jaUArjRthhLEnqmf" style="padding-top: 138.64818024%; transform: rotate(52.90979452deg);">
+                        <div id="iV4ThLb9Tg0NYcG3"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="qGrtuhfjM33CvAu9" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="xs8YqD1bi6gQ6Ej9"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="qRojrDuSxfpHRgYd" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="iZlupNyoMA3hw7JD">
+                    <div id="RqZUSB82OxRVNj5v" style="display: grid; position: relative; grid-area: 3 / 7 / 8 / 10;">
+                        <div id="jIKCNdHQlRknAgbl" style="z-index: 4;">
+                            <div id="JZW97obhpnyqU3bw" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-59381234-5e6a-4abc-8aa1-22a3500a7ec3 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="k2qxVf3m3Urqbfch"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="Qw1UcscMcvWJxKNo"
+                                                style="color: #feff46; font-family: YADZ-XEawXk-0; line-height: 0.84684589em; text-align: center; -webkit-text-stroke: 0.03em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                                <span id="uWtrqZYIvHpdRgPw" style="color: #feff46;">SMORMU</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="BpPiuyJCwSDEC0J4" style="z-index: 5;">
+                            <div id="GxsVMr7CyO5v1qLV" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-deded967-01cf-4cba-82bc-a9a092263b2e 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="sLkUcFZTemMchiq5"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="d7i7TLsafeJI56pS"
+                                                style="color: #feff46; font-family: YADZ-XEawXk-0; line-height: 0.84684589em; text-align: center;">
+                                                <span id="KhkE62muL2a3ioFg" style="color: #feff46;">SMORMU</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nqMIJTfFrPCWUueT" style="z-index: 1; pointer-events: none;">
+                    <div id="aGPuddQHsQ20uWsv" style="padding-top: 138.64818024%; transform: rotate(52.90979452deg);">
+                        <div id="xxugHK6D6efaBNpp"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="cyNOlMcHNpkD5hPW" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="TqOgM86XZ3KJzjdO"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="Xv52MxVq8In0MuUc" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bboFRDXXVOh8Ni0H" style="z-index: 3;">
+                    <div id="RsreJZoDJboMJDUb" style="padding-top: 57.59218465%; transform: rotate(0deg);">
+                        <div id="vWZ2zf3ltS2HmCfX"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <svg id="LxFGMOKJIGceL1ry" viewBox="0 0 191.0083 110.0059"
+                                style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                <g id="grqZVVljZ4G31R2m" style="transform: scale(1, 1);">
+                                    <foreignObject id="ExLfBYbh2fK0fwVX" style="width: 191.0083px; height: 110.0059px;">
+                                        <div id="Jzq00FjHnrs6vZYg" style="
+                                                    clip-path: path(
+                                                        'M2.61437896,0 L188.39393708,0 C189.08731349,0 189.75229101,0.27544271 190.24258217,0.76573387 190.73287333,1.25602503 191.00831604,1.92100255 191.00831604,2.61437896 L191.00831604,107.39148041 C191.00831604,108.08485683 190.73287334,108.74983435 190.24258217,109.24012551 189.75229101,109.73041667 189.08731349,110.00585938 188.39393708,110.00585938 L2.61437896,110.00585938 C1.92100255,110.00585938 1.25602503,109.73041667 0.76573387,109.24012551 0.27544271,108.74983434 0,108.08485682 0,107.39148041 L0,2.61437896 C0,1.92100255 0.27544271,1.25602503 0.76573387,0.76573387 1.25602503,0.27544271 1.92100255,0 2.61437896,0 Z'
+                                                    );
+                                                ">
+                                            <div id="HEA7Gssjie5IFzcU"
+                                                style="transform: scale(1, 1); transform-origin: 96px 55.5px;">
+                                                <video id="ErDUI1AVGZybEkkf" src="media/smormu.mp4" playsinline=""
+                                                    preload="none" autoplay="" muted="" controls=""
+                                                    data-controls-width="100.5191921%"
+                                                    data-controls-height="100.9036788%" data-controls-top="0%"
+                                                    data-controls-left="0%"
+                                                    style="transform: translate(-2.27883041px, 0px) rotate(0deg); width: 195.56596981px; height: 110.00585802px; display: block; opacity: 1; object-fit: fill;"></video>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="OY7HTwsASWUVpPIR" style="z-index: 8; pointer-events: none;">
+                    <div id="WoGzVazZ4joiOzkQ" style="padding-top: 138.64818024%; transform: rotate(30.35589694deg);">
+                        <div id="mLXodcHLbMBKszg3"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="gF493rWW0GbqtJTR" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="oj1Z9PC7GEIEfyza"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="ibrq5y4dRgd6ElFG" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="zXdJt7vcTiqhzmVX" style="z-index: 2; pointer-events: none;">
+                    <div id="GQD9bdKxPIokF2kB" style="padding-top: 138.64818024%; transform: rotate(30.35589694deg);">
+                        <div id="yhL6wlrh99TajIqX"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="NnczlgXJ4uf26aYI" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="CmS2cbwFrpww9yv5"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="pv6AW97LE4GoOOaH" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="JWnwKL2xi6rqViNe" style="z-index: 7; pointer-events: none;">
+                    <div id="qJZIK2E843ibxLCU" style="padding-top: 138.64818024%; transform: rotate(114.17923903deg);">
+                        <div id="PQcxIayZQEWgHxPU"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="gsvJfLkl4xwCyp7X" style="width: 100%; height: 100%; opacity: 0.4;">
+                                <div id="z1apcsFZ0CODhMiT"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="iFxazKSfpgUU9w0R" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/shrimp.svg" alt="Shrimp Seafood Animal Illustration"
+                                            loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-6" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="bKrzCEEj3LEd5l4l"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="kq5IlHbiLklLek3c"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="sawgnz8b0TZPE20T" style="z-index: 0;">
+                    <div id="ssaNUApUAM1NeAcN"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="neVZzXEpb5Xh5nHv" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="iwedyCR0Qpy5LZql"
+                                style="background-color: #feff46; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Rv5fbwCWOBbpWkmH" style="z-index: 1;">
+                    <div id="qognBrIhW3etZkU6"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="hgzzlnp74poh5llN" style="width: 100%; height: 100%; opacity: 0.31;">
+                            <div id="JU6tRZTJxyAXW5EU"
+                                style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                <div id="NYrsXfj4vbVDrEcd" style="
+                                            width: calc(100% * max(1, var(--scale-fill, 1)));
+                                            height: calc(100% / min(1, var(--scale-fill, 1)));
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            opacity: 1;
+                                            animation: pulse 1.5s ease-in-out infinite;
+                                        ">
+                                    <img src="images/657535c8372cc7e1386a9a3a552c0a0d.svg" alt="yellow shape"
+                                        loading="lazy"
+                                        style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="h5mbtQD9Mbcb3aKg" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="F8ROZ8PxcSDHS4tB">
+                    <div id="cdCJ2HPtz0o2sNO0" style="display: grid; position: relative; grid-area: 2 / 2 / 4 / 12;">
+                        <div id="nn3syHQbSmTcvHmt" style="z-index: 10;">
+                            <div id="jHoMY7J21TQaOs4g" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-b0ad19eb-4edb-4507-afba-067705389336 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="faCpJMT5e0vyCZ3A"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="cRnPwO7y2ET6Ebbh"
+                                                style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.84437571em; text-align: center; -webkit-text-stroke: 0.03em rgb(0, 0, 0); -webkit-text-fill-color: transparent;">
+                                                <span id="IUn8qGX7RnKtHr9Z" style="color: #38b6ff;">CONTACT US</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="iVdSi6XU96tuaPDX" style="z-index: 11;">
+                            <div id="fRp1kcdagvCA5Hg3" style="box-sizing: border-box; width: 100%; height: 100%;">
+                                <div class="animation_container" style="width: 100%; height: 100%;">
+                                    <div class="animated"
+                                        style="width: 100%; height: 100%; animation: rise-LEFT-e58d62cb-b3c3-4b19-80cb-73907eedb7b9 1000ms 100ms both paused, linear_fade 400ms linear both paused;">
+                                        <div id="DJHPrygIxDMY8Kj5"
+                                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                            <p id="IZgCagi3KmIezr0q"
+                                                style="color: #38b6ff; font-family: YADZ-XEawXk-0; line-height: 0.84437571em; text-align: center;">
+                                                <span id="foOJmI3WRCf2gPCX" style="color: #38b6ff;">CONTACT US</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="NmK2fDELpBkPg54o">
+                    <div id="HWYlKINtPnDHZsZo" style="display: grid; position: relative; grid-area: 3 / 13 / 9 / 14;">
+                        <div id="st8CITc4P0GMu4Vl" style="z-index: 9;">
+                            <div id="mTKze1fEYiFRt7LS" style="padding-top: 80.875%; transform: rotate(0deg);">
+                                <div id="XwFNlxLUpy1D4z3Y"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div id="TFNuPnc6gk4WZYxb" style="width: 100%; height: 100%; opacity: 1;">
+                                        <div id="dedETr5UykWse1n2"
+                                            style="transform: scale(-1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                            <div id="ggpUoshmw0tBVu1E" style="
+                                                        width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                        height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        opacity: 1;
+                                                        animation: pulse 1.5s ease-in-out infinite;
+                                                    ">
+                                                <img src="images/idea-cloud.svg"
+                                                    alt="Thought Bubble Illustration Outline" loading="lazy"
+                                                    style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="c4XWvnuOLlwWabNx" style="z-index: 15;">
+                            <div id="pr9QmnrOwZHQ59z9"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="sDKSVER023vq5kOM"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="FMpGJ9r4JyivIYdb"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em;">
+                                        <span id="P5EDUUqZMo0a299u" style="color: #000000;">1B INCOMING MY
+                                            FREN</span><br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Fyn0VD2Fs8Njg0i8">
+                    <div id="VrK0QgQE3fsalMD6" style="display: grid; position: relative; grid-area: 5 / 3 / 7 / 7;">
+                        <!-- <div id="FjmqFTQUv8W4g8He" style="z-index: 2; pointer-events: none;">
+                            <div id="lhnKG7kuhc21BNfr" style="padding-top: 31.01754718%; transform: rotate(0deg);">
+                                <div id="QZWH5mbxtoUE2a6L"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="kaNkmOnqEUTE8nFm" viewBox="0 0 48.0923 14.917"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="Oy7hCYKkukogyrcy" style="transform: scale(1, 1);">
+                                            <path id="TVDamcq8EB30Ow4y"
+                                                d="M1.97530921,0 L46.11697594,0 C46.64086052,0 47.14328815,0.20811234 47.51373049,0.57855467 47.88417282,0.94899701 48.09228516,1.45142463 48.09228516,1.97530921 L48.09228516,12.94173829 C48.09228516,13.46562287 47.88417282,13.96805049 47.51373048,14.33849283 47.14328814,14.70893517 46.64086052,14.9170475 46.11697594,14.9170475 L1.97530921,14.9170475 C1.45142464,14.9170475 0.94899701,14.70893516 0.57855467,14.33849283 0.20811234,13.96805049 0,13.46562287 0,12.94173829 L0,1.97530921 C0,1.45142464 0.20811234,0.94899701 0.57855467,0.57855467 0.94899701,0.20811234 1.45142463,0 1.97530921,0 Z"
+                                                style="fill: #38b6ff; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div id="gBytpj8fKzXJjh2l" style="z-index: 12;">
+                            <div id="BBqPzOnu7RAkUrEA"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="x8n5CJr6Pud7o9GT"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="FAw2Cx0YEvr4WIw8"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em;">
+                                        <span id="fTqXlDF7tRavt4hy" style="color: #000000;"><a
+                                                href="https://x.com/smormucto" target="_blank">TWITTER</a></span><br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div id="wSFMphKPfGdq6YNd" style="z-index: 5;">
+                            <div id="Ab2Y2b373KCEsBMg" style="padding-top: 104.30247718%;">
+                                <div id="Q9qRGKGI6SjURixA"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-LEFT-9bcea3a6-00c4-41e9-9f6b-dfc8cddc92bd 500ms 100ms both paused;">
+                                            <a id="TdARu4bG8dcCyy64" target="_blank" rel="noopener"
+                                                href="https://x.com/smormucto" style="pointer-events: all;"
+                                                data-interstitial-link="">
+                                                <div id="ArvfGIQSTbdnyXuo"
+                                                    style="width: 100%; height: 100%; opacity: 1;">
+                                                    <div id="Qgl2hZSXjlITdEkS"
+                                                        style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                        <div id="l0XcIkOCy46Jnqlg" style="
+                                                                    width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                    height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                    position: absolute;
+                                                                    top: 50%;
+                                                                    left: 50%;
+                                                                    opacity: 1;
+                                                                    animation: pulse 1.5s ease-in-out infinite;
+                                                                ">
+                                                            <img src="images/twitter-yellow.svg"
+                                                                alt="Bird Symbol Illustration" loading="lazy"
+                                                                style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div id="X7BPVtDtN9Wktwqt" style="z-index: 8;">
+                    <div id="bvgTau0DYYr2vkAQ" style="padding-top: 56.30630631%; transform: rotate(0deg);">
+                        <div id="PcgaGgSfFYygA4uC"
+                            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            <div id="DHNSAM34MtGAleBs" style="width: 100%; height: 100%; opacity: 1;">
+                                <div id="gbaE7cRPqacnZEzl"
+                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                    <div id="VxRF1RKVXUhr9Ua3" style="
+                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                opacity: 1;
+                                                animation: pulse 1.5s ease-in-out infinite;
+                                            ">
+                                        <img src="images/smiley-smormu.png" loading="lazy"
+                                            style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="d0pmJpFe8jvtKH8f">
+                    <div id="lJcdcR12jsUjHfBv" style="display: grid; position: relative; grid-area: 8 / 4 / 10 / 8;">
+                        <div id="xb5nLSKI1XkvENcS" style="z-index: 3; pointer-events: none;">
+                            <div id="gW4AVQIeMpe72A8i" style="padding-top: 31.01754718%; transform: rotate(0deg);">
+                                <div id="fHlt5vDQefMxmERm"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="nGhDJvqVRE0RiIXS" viewBox="0 0 48.0923 14.917"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="rFql45yHt87izZNV" style="transform: scale(1, 1);">
+                                            <path id="EFdPjX5KU5YMUqGq"
+                                                d="M1.97530921,0 L46.11697594,0 C46.64086052,0 47.14328815,0.20811234 47.51373049,0.57855467 47.88417282,0.94899701 48.09228516,1.45142463 48.09228516,1.97530921 L48.09228516,12.94173829 C48.09228516,13.46562287 47.88417282,13.96805049 47.51373048,14.33849283 47.14328814,14.70893517 46.64086052,14.9170475 46.11697594,14.9170475 L1.97530921,14.9170475 C1.45142464,14.9170475 0.94899701,14.70893516 0.57855467,14.33849283 0.20811234,13.96805049 0,13.46562287 0,12.94173829 L0,1.97530921 C0,1.45142464 0.20811234,0.94899701 0.57855467,0.57855467 0.94899701,0.20811234 1.45142463,0 1.97530921,0 Z"
+                                                style="fill: #38b6ff; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fYz87i5kX5Bfk1kx" style="z-index: 13;">
+                            <div id="bHNxGX1cuH1k4RCL"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="v4TqMmjWBV1ZMsRf"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="gr2vSWy5zf5aHY0B"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em;">
+                                        <span id="soK32W9SO0BBB8Zo" style="color: #000000;"><a id="UxujPJGwVQfPRxOtxxx"
+                                                href="https://t.me/smormuchannel" target="_blank">TELEGRAM</a></span><br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b3brGLZ9qXPZ9Nt8" style="z-index: 6;">
+                            <div id="q1NKj09Ru4KRWzuS" style="padding-top: 97.125%;">
+                                <div id="JqpUsWv0QrSVP9Qj"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-LEFT-6b6a3243-6212-43f9-9ae2-f4a88e8bf9a7 500ms 100ms both paused;">
+                                            <a id="UxujPJGwVQfPRxOt" target="_blank" rel="noopener"
+                                                href="https://t.me/smormuchannel" style="pointer-events: all;"
+                                                data-interstitial-link="">
+                                                <div id="u6dTSzNoqoZPgN4D"
+                                                    style="width: 100%; height: 100%; opacity: 1;">
+                                                    <div id="usfvySgdsFvBlrSD"
+                                                        style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                        <div id="bSwd4h7PJUNIJ0a2" style="
+                                                                    width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                    height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                    position: absolute;
+                                                                    top: 50%;
+                                                                    left: 50%;
+                                                                    opacity: 1;
+                                                                    animation: pulse 1.5s ease-in-out infinite;
+                                                                ">
+                                                            <img src="images/telegram-yellow.svg"
+                                                                alt="Paper Plane Vector Icon" loading="lazy"
+                                                                style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Fdz9T5bilt10qrV2">
+                    <div id="gwaNeSN5eE0axMay" style="display: grid; position: relative; grid-area: 11 / 5 / 12 / 9;">
+                        <!-- <div id="TFuhO2JOff2CTX6k" style="z-index: 4;">
+                            <div id="NKXEhpQNQhM0YfrA" style="padding-top: 31.01754718%; transform: rotate(0deg);">
+                                <div id="VMwf9zeIRipj9Eie"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <svg id="PMQOPmxUeAzEHpC2" viewBox="0 0 48.0923 14.917"
+                                        style="width: 100%; height: 100%; opacity: 1; overflow: hidden; position: absolute; top: 0%; left: 0%; background: url('data:image/png;base64,');">
+                                        <g id="nbDhHnVT112bo6OF" style="transform: scale(1, 1);">
+                                            <path id="tzEflVDPSc6B4K6y"
+                                                d="M1.97530921,0 L46.11697594,0 C46.64086052,0 47.14328815,0.20811234 47.51373049,0.57855467 47.88417282,0.94899701 48.09228516,1.45142463 48.09228516,1.97530921 L48.09228516,12.94173829 C48.09228516,13.46562287 47.88417282,13.96805049 47.51373048,14.33849283 47.14328814,14.70893517 46.64086052,14.9170475 46.11697594,14.9170475 L1.97530921,14.9170475 C1.45142464,14.9170475 0.94899701,14.70893516 0.57855467,14.33849283 0.20811234,13.96805049 0,13.46562287 0,12.94173829 L0,1.97530921 C0,1.45142464 0.20811234,0.94899701 0.57855467,0.57855467 0.94899701,0.20811234 1.45142463,0 1.97530921,0 Z"
+                                                style="fill: #38b6ff; opacity: 1;"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div id="RTbmIcZtAhYj7rTG" style="z-index: 14;">
+                            <div id="IWEcuYNlA4yVeXu7"
+                                style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                                <div id="HhH6dLH8GT456qLt"
+                                    style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                                    <p id="plnm6Fg6KXqcNqwU"
+                                        style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.3732951em;">
+                                        <span id="JLIvPGAqlO98SgAi" style="color: #000000;">TEAM</span></p>
+                                    <p>
+                                        <script
+                                            language="JavaScript">user = 'smormucto'; site = 'proton.me'; document.write('<a href=\"mailto:' + user + '@' + site + '\">'); document.write(user + '@' + site + '</a>');</script>
+                                        <a href="mailto:smormucto@proton.me">smormucto@proton.me</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div id="FDBroLbPkz9b2oks" style="z-index: 7;">
+                            <div id="KkWtQdnThsbGv0E4" style="padding-top: 100%;">
+                                <div id="NuPGQw0pYFc7TzFF"
+                                    style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    <div class="animation_container" style="width: 100%; height: 100%;">
+                                        <div class="animated"
+                                            style="width: 100%; height: 100%; animation: pop-LEFT-f96238fa-e2ca-463b-8704-3d6bbbd9c758 500ms 100ms both paused;">
+                                            <div id="iGFrkkwIA20XHiMz" style="width: 100%; height: 100%; opacity: 1;">
+                                                <div id="bpYOYszF04qT3idM"
+                                                    style="transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                                                    <div id="jPMuXpcLIJo61YSs" style="
+                                                                width: calc(100% * max(1, var(--scale-fill, 1)));
+                                                                height: calc(100% / min(1, var(--scale-fill, 1)));
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                opacity: 1;
+                                                                animation: pulse 1.5s ease-in-out infinite;
+                                                            ">
+                                                        <script
+                                                            language="JavaScript">user = 'smormucto'; site = 'proton.me'; document.write('<a class=\"__cf_email__\" href=\"mailto:' + user + '@' + site + '\">'); document.write("<img src='/images/mail-yellow.svg' alt='Email Message' loading='lazy' style='width: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);' />" + "</a>");</script>
+                                                        <a class="__cf_email__" href="mailto:smormucto@proton.me"><img
+                                                                src="images/mail-yellow.svg" alt="Email Message"
+                                                                loading="lazy"
+                                                                style="width: 100%; display: block; object-fit: cover; object-position: 50% 50%; transform: translate(-50%, -50%) rotate(0deg);"></a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div id="BZZMLI0YJK54kXFL" style="z-index: 16;">
+                    <div id="NF58XqkkMGZHks8Q"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="giD5SmINHLOYzMWI"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="nwAP0YmpHNYy00Xy"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.38493285em;">
+                                <span id="km7jtpjGJmAT2WNy" style="color: #000000;">
+                                    DISCLAIMER: $SMORMU IS A MEME TOKEN WITH NO INTRINSIC VALUE. DON'T RISK MONEY YOU
+                                    ARE AFRAID OF LOSING. THE PRICE MAY GO UP OR IT MAY GO DOWN. WE ARE NOT RESPONSIBLE
+                                    FOR THE PRICE OF THE TOKEN.
+                                </span>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-7" aria-hidden="true" style="visibility: hidden;"></a>
+        <section id="CX6W34mVXIlVTmQN"
+            style="position: relative; overflow: hidden; display: grid; align-items: center; grid-template-columns: auto 100rem auto; z-index: 0; margin-top: -1px;">
+            <div id="iJXa0EI3a8F6AjWK"
+                style="grid-area: 1 / 1 / 2 / 4; display: grid; position: absolute; min-height: 100%; min-width: 100%;">
+                <div id="gojAaHGNpOqamsdk" style="z-index: 0;">
+                    <div id="zuLPt8WQHutJAxe6"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="fEFt7en570UWFmc3" style="width: 100%; height: 100%; opacity: 1;">
+                            <div id="YeQaPkGA4I2DLYUw"
+                                style="background-color: #38b6ff; opacity: 1; transform: scale(1, 1); width: 100%; height: 100%; overflow: hidden; position: relative;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ZDI4w7E1b47EuZXA" style="display: grid; position: relative; grid-area: 1 / 2 / 2 / 3;">
+                <div id="mjMaBXSrK986NM5W" style="z-index: 1;">
+                    <div id="XqwubSWLTiZpkZKj"
+                        style="box-sizing: border-box; width: 100%; height: 100%; transform: rotate(0deg);">
+                        <div id="RNpGGCAfxMWeZnnN"
+                            style="opacity: 1; display: flex; box-sizing: border-box; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                            <p id="nK5ePGkhyUW4AArS"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39211431em; text-align: center;">
+                                <span id="dP8BwTPf6FfYmbxJ" style="color: #000000;">SMORMU. 2024</span></p>
+                            <p id="NJFpDxN6kl7ld1QB"
+                                style="color: #000000; font-family: YAFcfmqu0u4-0; line-height: 1.39211431em; text-align: center;">
+                                <span id="Bf0FZGc0cz8lbKxw" style="color: #000000;">ALL RIGHTS RESERVED</span><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/a7bdac05b24347a77bc2ba39247eaaf9c12b11b8b5b7c8ffcd473c8cd1f4ef7d.js" async="" nonce=""></script>
+        <script src="js/939898b427480d700449229ff00dbb8a6f9f77442b532f697866e6914ab8843a.js" async="" nonce=""></script>
+        <script src="js/388fb330498371d4935abbff11d34d4c30842ca3c4a128cdd290d29db98acb41.js" async="" nonce=""></script>
+    </div>
+
+    <script>'undefined' === typeof _trfq || (window._trfq = []); 'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({ 'tccl.baseHost': 'secureserver.net' }, { 'ap': 'cpsh-oh' }, { 'server': 'p3plzcpnl504677' }, { 'dcenter': 'p3' }, { 'cp_id': '9974883' }, { 'cp_cl': '8' }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>
+    <script src="js/scc-c2.min.js"></script>
+</body>
+
+</html>
